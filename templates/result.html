@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Price Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body>
+    <div class="col-md-offset-3 col-md-5">
+        <h3 class="page-header text-primary">House Price Prediction Result</h3>
+        <table class="table table-bordered">
+            <tr>
+                <th>Bedrooms</th>
+                <td>{{bedrooms}}</td>
+            </tr>
+            <tr>
+                <th>Double Bedrooms</th>
+                <td>{{doublebedrooms}}</td>
+            </tr>
+            <tr>
+                <th>Floors</th>
+                <td>{{floors}}</td>
+            </tr>
+             <tr>
+                <th>Year of Build</th>
+                <td>{{yr_built}}</td>
+            </tr>
+            <tr>
+                <th>House Price Prediction</th>
+                <td>{{data}}</td>
+            </tr>
+        </table>
+        <form action="/">
+            <input type="submit" value="Back to Home Page" class="submit">
+        </form>
+    </div>
+</body>
+</html>

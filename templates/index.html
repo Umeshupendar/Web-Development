@@ -1,3 +1,30 @@
-body{
-  background:#ccc;
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>House Price Prediction</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="register_page">
+        <div class="form">
+            <form action="{{url_for('predict')}}" method="POST">
+                <h1 style="color:darkgreen ;">House Price Prediction</h1>
+                Name: <input type="text" name='name' placeholder="Enter your sweet name">
+	            Age: <input type="number" name="age" placeholder="Enter your age" >
+	            Address: <input type="text" name="address" placeholder="Enter your address" >
+	            Contact: <input type="number" name="contact" placeholder="Enter your contact number" >
+	            Mail: <input type="text" name="mail" placeholder="Enter your mail ID" >
+                Bedrooms: <input type="number" name='bedrooms' placeholder="Enter the no of Bedrooms">
+                Double Bedrooms: <input type="number" name='doublebedrooms' placeholder="Enter the no of Bathrooms">
+                Floors: <input type="number" name='floors' placeholder="Enter the no of Floors">
+                Year of Build: <input type="number" name='yr_built' placeholder="Enter year of Build">
+                <input type="submit" value="predict" class="submit">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
